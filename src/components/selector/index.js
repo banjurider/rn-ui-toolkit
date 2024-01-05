@@ -43,34 +43,34 @@ const UISelector = props => {
           flex: 1,
           padding: 20,
           backgroundColor:
-            props.backColor === undefined ? '#000000CC' : props.backColor,
+            props.backColor === undefined ? '#000000dd' : props.backColor,
         }}>
         <ScrollView
-          style={{
+          contentContainerStyle={{
             borderWidth: 0,
             borderColor: 'red',
             flex: 1,
+            alignContent: 'center',
+            justifyContent: 'center',
           }}>
-          <View style={{flex: 1, borderWidth: 0, borderColor: 'blue'}}>
-            <View
-              style={{
-                backgroundColor: '#fff',
-                paddingVertical: 20,
-                borderRadius: 6,
-              }}>
-              <View>
-                <Text
-                  style={{
-                    paddingHorizontal: 20,
-                    paddingTop: 10,
-                    fontSize: 16,
-                    fontWeight: 'bold',
-                  }}>
-                  {props.title}
-                </Text>
-              </View>
-              <View style={{margin: 20}}>{renderview()}</View>
+          <View
+            style={{
+              backgroundColor: '#fff',
+              paddingVertical: 20,
+              borderRadius: 4,
+            }}>
+            <View>
+              <Text
+                style={{
+                  paddingHorizontal: 20,
+                  paddingTop: 10,
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                }}>
+                {props.title}
+              </Text>
             </View>
+            <View style={{margin: 20}}>{renderview()}</View>
           </View>
         </ScrollView>
       </View>
