@@ -1,6 +1,6 @@
 {
   "name": "@banjurider/rn-ui-toolkit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Native UI Toolkit",
   "main": "index.js",
   "private": false,
@@ -9,7 +9,7 @@
   },
   "peerDependencies": {
     "react": ">=18.0",
-    "react-native": ">=0.72.0"
+    "react-native": ">=0.70.0"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/banjurider/rn-ui-toolkit/issues"
   },
-  "homepage": "https://github.com/banjurider/rn-ui-toolkit#readme"
+  "homepage": "https://github.com/banjurider/rn-ui-toolkit#readme",
+  "devDependencies": {}
 }
