@@ -8,6 +8,9 @@ import {Text, View, Modal, ScrollView} from 'react-native';
  * @param {Array} data - array of object
  * @param {Function} onSelected - function
  * @param {String} backColor - Color in hex
+ * @param {Object} textStyle - Stylesheet object
+ * @param {String} title - Title to display on selector
+ * @param {Object} titleStyle - Stylesheet object
  * @returns
  */
 const UISelector = props => {
@@ -27,7 +30,12 @@ const UISelector = props => {
             onPress={() => {
               //   setSelected(index);
               props.onSelected(index, item);
-            }}>
+            }}
+            style={
+              props.textStyle === undefined
+                ? {color: '#22222299', fontFamily: 'sans-serif', fontSize: 14}
+                : props.textStyle
+            }>
             {item.value}
           </Text>
         </View>
@@ -38,18 +46,17 @@ const UISelector = props => {
     <Modal visible={props.visible} transparent={true} animationType="fade">
       <View
         style={{
-          alignContent: 'center',
-          justifyContent: 'center',
           flex: 1,
-          padding: 20,
           backgroundColor:
             props.backColor === undefined ? '#000000dd' : props.backColor,
         }}>
         <ScrollView
+          style={{flex: 1}}
           contentContainerStyle={{
             borderWidth: 0,
             borderColor: 'red',
-            flex: 1,
+            padding: 20,
+            marginVertical: 20,
             alignContent: 'center',
             justifyContent: 'center',
           }}>
@@ -61,12 +68,16 @@ const UISelector = props => {
             }}>
             <View>
               <Text
-                style={{
-                  paddingHorizontal: 20,
-                  paddingTop: 10,
-                  fontSize: 16,
-                  fontWeight: 'bold',
-                }}>
+                style={[
+                  props.titleStyle === undefined
+                    ? {
+                        paddingHorizontal: 20,
+                        paddingTop: 10,
+                        fontSize: 16,
+                        fontWeight: 'bold',
+                      }
+                    : props.titleStyle,
+                ]}>
                 {props.title}
               </Text>
             </View>

@@ -18,6 +18,8 @@ const style = StyleSheet.create({
  * @param {String} defaultText - Text to display initially
  * @param {Object} style - Stylesheet object
  * @param {String} backColor - Color in hex
+ * @param {String} title - Title to display on selector
+ * @param {Object} textStyle - Stylesheet object
  * @returns
  */
 const ComboBox = props => {
@@ -44,6 +46,7 @@ const ComboBox = props => {
         visible={visible}
         backColor={props.backColor}
         title={props.title === undefined ? 'Select your option' : props.title}
+        textStyle={props.textStyle || undefined}
       />
     </View>
   );
