@@ -1,6 +1,6 @@
 {
   "name": "@banjurider/rn-ui-toolkit",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "React Native UI Toolkit",
   "main": "index.js",
   "private": false,

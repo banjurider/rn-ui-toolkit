@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState} from 'react';
-import {Text, View, Modal, ScrollView} from 'react-native';
+import {Text, View, Modal, ScrollView, Platform} from 'react-native';
 
 /**
  *
@@ -33,7 +33,7 @@ const UISelector = props => {
             }}
             style={
               props.textStyle === undefined
-                ? {color: '#22222299', fontFamily: 'sans-serif', fontSize: 14}
+                ? {color: '#22222299', fontFamily: Platform.OS === 'android' ? 'sans-serif' : 'Helvetica', fontSize: 14}
                 : props.textStyle
             }>
             {item.value}
@@ -75,6 +75,7 @@ const UISelector = props => {
                         paddingTop: 10,
                         fontSize: 16,
                         fontWeight: 'bold',
+                        color: '#222',
                       }
                     : props.titleStyle,
                 ]}>

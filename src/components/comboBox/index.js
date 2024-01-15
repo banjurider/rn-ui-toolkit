@@ -37,7 +37,7 @@ const ComboBox = props => {
     <View>
       <View style={[props.style === undefined ? style.container : props.style]}>
         <Pressable onPress={() => setVisible(true)}>
-          <Text>{selectedText}</Text>
+        <Text style={props.textStyle || {color: '#222'}}>{selectedText}</Text>
         </Pressable>
       </View>
       <UISelector
